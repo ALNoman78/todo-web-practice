@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div id="content-comment">
+
+        </div>
+        <div id="container">
+            <input type="text" name="" id="text">
+            <button id="btn">comment</button>
+        </div>
+    </section>
+    <script>
+        document.getElementById('btn').addEventListener('click', function(){
+            // step - 1
+            const inputFiled = document.getElementById('text');
+            const value = inputFiled.value
+            // step - 2
+            const e = document.getElementById('content-comment');
+            const newElement = document.createElement('p');
+            newElement.innerText = value;
+            // step - 3
+            e.append(newElement)
+            inputFiled.value = '';
+        })
+        document.getElementById('content-comment').addEventListener('click', function(e){
+            e.target.parentNode.removeChild(e.target)
+        })
+    </script>
+</body>
+</html>
