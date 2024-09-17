@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center font-sans">
+    <section class="rounded-xl shadow-lg h-[400px] bg-gradient-to-r from-purple-500 to-pink-500 p-5 mt-20">
+        <h1 class="text-xl my-8 font-bold uppercase text-center text-wrap">This is cart type section</h1>
+        <div id="container" class=" bg-white rounded-xl shadow-sm">
+            <input type="text" name="" id="input-field" class="bg-transparent p-2 outline-0">
+            <button id="main-btn" onclick=" btnAlert()" class="btn p-2">Add Items</button>
+        </div>
+        <div id="added-items-container">
+            <!-- <p class="items">Add...</p> -->
+        </div>
+    </section>
+    <script>
+        document.getElementById("main-btn").addEventListener('click', function () {
+            const inputField = document.getElementById('input-field');
+            const inputValue = inputField.value;
+            console.log(inputValue);
+
+            const newElement = document.createElement('p')
+            newElement.innerText = inputValue;
+            console.log(newElement);
+
+            const secondContainer = document.getElementById('added-items-container');
+            secondContainer.appendChild(newElement)
+
+            inputField.value = '';
+
+        })
+
+        document.getElementById('added-items-container').addEventListener('click', function (e) {
+            e.target.parentNode.removeChild(e.target);
+        })
+
+        function btnAlert(){
+            alert("Your order will be confirmed")
+        }
+    </script>
+</body>
+
+</html>

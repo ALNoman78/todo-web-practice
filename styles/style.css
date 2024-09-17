@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-container{
+    /* border: 2px solid black; */
+    margin: 10px;
+    padding: 10px 12px;
+    height: 400px;
+    width: 350px;
+    border: 2px solid black;
+    background: rgba(228, 141, 28, 0.729);
+    border-radius: 12px;
+    overflow-y: scroll;
+}
+#input-field{
+    padding: 7px;
+    outline: 0;
+    overflow : hidden;
+    font-weight: 500;
+}
+#input-field:focus{
+    color: black;
+}
+#btn-add{
+    padding: 7px 12px;
+    border: 0;
+    outline: 0;
+    color: black;
+    font-weight: bold;
+    background: tomato;
+}
+.design{
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+}
